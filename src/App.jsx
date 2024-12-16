@@ -3,7 +3,7 @@ import ProtectedRoutes from "./Routes/ProtectedRoutes";
 
 
 function App() {
-  return <ProtectedRoutes/>
+  return <h1>hello</h1>
   // return <ProtectedRoutes />;
 }
 
