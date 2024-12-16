@@ -34,7 +34,8 @@ export default function ProtectedRoutes() {
 
   return (
     <>
-      <BrowserRouter basename="/Port1">
+      <HomeBase />
+{/*       <BrowserRouter basename="/Port1">
         <Routes >
           {routes.map((route) => {
             return (
@@ -46,7 +47,7 @@ export default function ProtectedRoutes() {
             );
           })}
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 }
