@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   //base:"/",
-  base:"/Port/",
+  base:"/Port1/",
   plugins: [react()],
   APP_VERSION: JSON.stringify(process.env.APP_VERSION),
 });
