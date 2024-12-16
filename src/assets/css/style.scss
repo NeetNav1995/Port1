@@ -1,0 +1,221 @@
+$backgroundColor: white;
+$primaryColor: #FF6F61; //#6A0572; //#FF6F3C
+$primaryColor1: #2F2F2F;
+$primaryColor2: #4682B4;
+$secondaryColor: #e9ecef;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    // font-family: 'Source Sans Pro';
+    background-color: $backgroundColor;
+
+}
+
+nav {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+    a {
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 0.5rem;
+
+        &:not(.navbar-brand):not(.nav-link.active):hover {
+            color: $backgroundColor !important;
+            background-color: $primaryColor;
+        }
+
+        &:not(.navbar-brand).active {
+            color: $primaryColor2 !important;
+            font-weight: bold;
+        }
+
+        &.navbar-brand:hover {
+            transform: scale(1.2);
+        }
+
+    }
+
+    .navbar-collapse {
+        justify-content: center;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    button {
+        background-color: $backgroundColor;
+
+        &:hover {
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+        }
+    }
+}
+
+//uses flexbox
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1;
+    margin-top: 1rem;
+    overflow-y: auto;
+}
+
+.scrollable {
+    padding: 10px;
+}
+
+.header {
+    height: 60px;
+    // font-family: 'Montserrat';
+    background-color: $backgroundColor !important;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+    z-index: 10;
+
+    img {
+        height: 30px;
+        margin-right: .2em;
+    }
+
+    button {
+        border: none;
+    }
+}
+
+.footer_custom {
+    flex-shrink: 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: $primaryColor1 ;
+    padding: 1rem;
+    color: $backgroundColor !important;
+
+    a:hover {
+        transform: scale(1.2);
+    }
+
+    img {
+        height: 2rem;
+    }
+
+}
+
+a {
+    cursor: pointer;
+}
+
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribute space evenly */
+    flex: 1;
+    /* Ensures equal width */
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+    .card-header {
+        background-color: $secondaryColor;
+        color: $primaryColor1;
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .card-body {
+        display: flex;
+        flex: 1;
+        // justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .card-footer {
+        text-align: center;
+        margin-top: 10px;
+        background-color:$backgroundColor;
+        border-top: 0px;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        background-color: $primaryColor;
+        /* Deep Coral */
+        color: $backgroundColor;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #4682B4;
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+        }
+    }
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+hr {
+    border: 1px solid lightgrey;
+    width: 100%;
+    margin: 0.5rem;
+}
+
+
+
+@mixin header1($theme: $primaryColor2, $color: #fff) {
+    background: $theme;
+    color: $color;
+    font-size: 1.25rem;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.mainHeader {
+    @include header1;
+    text-align: center;
+    padding: 1rem;
+}
