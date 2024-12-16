@@ -1,4 +1,4 @@
-export const HOME_PATH = "/";
+export const HOME_PATH = "https://neetnav1995.github.io/Port1";
 export const NavigationPath = {
   HOME: HOME_PATH,
   ABOUT: `${HOME_PATH}aboutSection`,
